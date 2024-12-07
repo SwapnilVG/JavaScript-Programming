@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hero{
+            background-color: yellow;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium aut, beatae voluptate eum dolorum molestias error ipsa ab aliquid possimus fuga dolore omnis maiores animi quaerat eos ipsam, tempora maxime architecto? Excepturi ducimus dolor molestias? Architecto, maiores fuga repellendus nihil minus perspiciatis quo quisquam non aspernatur in hic odit? Voluptatibus?
+    </div>
+
+    <script>
+        let  a = document.querySelector(".hero")
+        let newE = "<b> Hi nice to Meet You</b>"
+        a.insertAdjacentHTML("beforebegin",newE)
+        a.insertAdjacentHTML("beforeend",newE)
+        a.insertAdjacentHTML("afterbegin",newE)
+        a.insertAdjacentHTML("afterend",newE)
+    </script>
+</body>
+</html>

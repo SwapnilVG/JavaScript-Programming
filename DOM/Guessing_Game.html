@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: orange;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .container{
+            background-color: white;
+            border-radius: 50px;
+        }
+        .head{
+            padding: 20px;
+            
+        }
+        hr{
+            height: 2px;
+            border: none;
+            background-color: orange;
+        }
+        #entry{
+            padding: 20px;
+            text-align: center;
+        }
+        #input{
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        input:focus{
+            border:2px solid orange;
+        }
+        #btn{
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            margin-left: 20px;
+            background-color: orange;
+            color: white;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <h1>Guess a number between 1 to 100</h1>
+        </div>
+        <hr>
+        <div id="entry">
+            <input type="text" name="input" id="input">
+            <button id="btn">Guess</button>
+            <p id="wrng"></p>
+            <p id="gesses">Number of Guess:0</p>
+        </div>
+    </div>
+    <script>
+        let input = document.getElementById("input");
+        let btn = document.getElementById("btn");
+        let wrng = document.getElementById("wrng");
+        let guesses = document.getElementById("gesses")
+
+        let anwer = Math.floor(Math.random()*100)+1;
+        console.log(anwer)
+        let numGuesses = 0
+
+        btn.addEventListener("click",()=>{
+            guessNumber();
+        })
+
+        function guessNumber(){
+            if(input.value < 1 || input.value > 100 || isNaN(input.value)){
+                wrng.textContent = "Please Enter Value between 1 to 100"
+                wrng.style.color = "red"
+            }else{
+                numGuesses++
+                guesses.innerHTML = "No of Guess : "+numGuesses;
+
+                if(input.value>anwer){
+                    wrng.textContent = "You Guess Too High"
+                    wrng.style.color = "red"
+                    input.value = ''
+                }else if(input.value<anwer){
+                    wrng.textContent = "You Guess Too Low"
+                    wrng.style.color = "red"
+                    input.value = ''
+                }else{
+                    wrng.textContent = "Congratulations You Guess the correct answer"
+                    wrng.style.color = "green"
+                    setTimeout(()=>{
+                        resetGame();
+                    },5000)
+                }
+            }
+        }
+
+        function resetGame(){
+            input.value = "",
+            numGuesses = 0
+            anwer = Math.floor(Math.random()*100)+1;
+            console.log(anwer)
+            guesses.innerHTML = "No of Guess : 0";
+        }
+    </script>
+</body>
+</html>

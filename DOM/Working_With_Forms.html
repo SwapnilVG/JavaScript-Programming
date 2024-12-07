@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="on_submit()">
+        Enter Your Email<input type="email" name="" id="input" onfocus="on_focus()" onblur="on_blur()" onselect="on_select()" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        let input = document.getElementById("input");
+
+        function on_focus(){
+            input.style.backgroundColor = 'red'
+        }
+
+        function on_blur(){
+            input.style.backgroundColor = 'yellow'
+        }
+
+        function on_submit(){
+            alert(input.value)
+        }
+
+        function on_select(){
+            alert("You Selected Somethings")
+        }
+    </script>
+</body>
+</html>

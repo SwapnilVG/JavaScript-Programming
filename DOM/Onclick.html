@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .color{
+            padding: 10px 30px;
+            border-radius: 20px;
+            color: white;
+            background-color: cadetblue;
+            font-family: cursive;
+            font-size: larger;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="color"  onclick="generateRandomColor()">Change Color</button>
+        <!-- <button class="color"  onmousemove="generateRandomColor()">Change Color</button> -->
+        <!-- <button class="color"  onmouseup="generateRandomColor()">Change Color</button> -->
+        <!-- <button class="color"  onmousedown="generateRandomColor()">Change Color</button> -->
+        <!-- <button class="color"  onmouseout="generateRandomColor()">Change Color</button> -->
+        <!-- <button class="color"  onmouseout="generateRandomColor()">Change Color</button> -->
+    </div>
+
+    <script>
+        let bk = document.getElementsByClassName("color")
+        function generateRandomColor(){
+            let colors = ["#606c38","#00b4d8","#ffafcc","#caf0f8","#ffc8dd","#d4a373","#ffcad4" ,"#b9fbc0","#c77dff","#9ef01a"];
+
+            let randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;   
+        }
+    </script>
+</body>
+</html>

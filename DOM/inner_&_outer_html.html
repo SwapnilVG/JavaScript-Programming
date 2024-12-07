@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div> Top 5 Sigmas
+        <ul>
+            <li>Keanu Reeves</li>
+            <li>Andrew Tate</li>
+            <li class=" hero">Johnny Bravo</li>
+            <li class=" hero2">Johnny Depp</li>
+            <li>Shinchan</li>
+        </ul>
+    </div>
+    <script>
+        let a = document.querySelector(".hero")
+        a.innerHTML = "Swapnil"
+        console.log(a.innerHTML)
+
+        let b = document.querySelector(".hero2")
+        b.outerHTML = "<li><b>Gadekar</b></li>"
+        console.log(b.outerHTML)
+    </script>
+</body>
+</html>

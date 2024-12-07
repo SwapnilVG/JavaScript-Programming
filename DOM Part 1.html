@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Part 1</title>
+     
+</head>
+<body>
+    <p id="one">Hello</p>
+
+    
+    <ul>
+        <li class="head">one</li>
+        <li class="head">two</li>
+        <li class="head">three</li>
+    </ul>
+
+    <main>Element</main>
+    <main>Element</main>
+    <main>Element</main>
+
+     <!-- Query Selector -->
+    <div>Hello</div>
+    <div class="classs">Hola</div>
+    <div id="ids">Hey</div>
+
+    <script>
+        // id
+        let swap = document.getElementById("one");
+        console.log(swap.innerText)
+
+        //class
+        let swap1 = document.getElementsByClassName("head")
+        console.log(swap1[0].innerText);
+        swap1[1].innerText="Swapnil"
+
+        //TagName
+        let swa3 = document.getElementsByTagName("main")
+        console.log(swa3[0].innerText)
+        swa3[1].innerHTML="Hello PW Skills"
+        swa3[2].style.color="red"
+        
+       //Query Selector
+       let swa4 = document.querySelector(".classs")
+       console.log(swa4);
+    //    swa4.className = "Swapnil"
+    //    swa4.classList = "Swapnil Swapnil Swapnil"
+          swa4.setAttribute("title","Hi User")
+
+      
+
+       
+
+        
+            
+    </script>
+</body>
+</html>

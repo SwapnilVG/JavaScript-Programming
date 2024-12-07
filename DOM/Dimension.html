@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 20px;
+        background-color: chocolate;
+      }
+      div {
+        background-color: brown;
+        height: 100px;
+        /* padding: 20px; */
+        width: max-content;
+      }
+      span {
+        background-color: blueviolet;
+        padding: 50px;
+        width: max-content;
+      }
+      button {
+        padding: 10px 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>
+        <button>Click Me</button>
+      </span>
+    </div>
+    <script>
+      let a = document.querySelector("div");
+    //   console.log(a.getBoundingClientRect())
+      console.log(a.getBoundingClientRect().height)
+    </script>
+  </body>
+</html>

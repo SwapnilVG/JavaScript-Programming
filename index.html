@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .container{
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .container:hover img:not(:hover){
+      transform: scale(0.75);
+      transition: 1s; 
+    
+    }
+
+    .container:hover img{
+      transform: scale(1.5);
+      transition: 1s;
+      margin-left: 20px;
+      margin-right: 20px;
+
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>SVG</h1>
+    </div>
+  
+    <div class="container">
+      <ul>
+        <li>
+          <a href="https://learn.pwskills.com/">Home</a></li>
+
+          <li><a href="">Services</a></li>
+          
+          <li><a href="">Career</a></li>
+          <li><a href="">Contact</a></li>
+        
+      </ul>
+    </div>
+  </header>
+  <div class="container">
+    <img src="./swapnil.jpg"  width="200px">
+    <img src="./swapnil.jpg"  width="200px">
+    <img src="./swapnil.jpg"  width="200px">
+    <img src="./swapnil.jpg"  width="200px">
+  </div>
+  <script src="./RoughWork.js"></script>
+</body>
+</html>

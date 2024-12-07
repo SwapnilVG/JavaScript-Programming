@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #but{
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: medium;
+            background-color: lightpink;
+            color:white;
+            font-family: cursive;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <button id="but">Change Color</button>
+    <script>
+        document.getElementById("but").addEventListener("click",change_color)
+
+        function change_color(){
+            let colors = ["#606c38","#00b4d8","#ffafcc","#caf0f8","#ffc8dd","#d4a373","#ffcad4" ,"#b9fbc0","#c77dff","#9ef01a"]; 
+            let random_color = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = random_color
+        }
+    </script>
+</body>
+</html>

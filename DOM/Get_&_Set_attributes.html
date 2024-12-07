@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class=" student" title="I name is Swapnil" about = "SVG" >Swapnil</h1>
+
+    <script>
+        let a = document.querySelector(".student")
+        console.log(a.getAttribute("about"))
+
+        a.setAttribute("example",123)
+        console.log(a.outerHTML)
+
+        console.log("---------------")
+
+        for(let att of a.attributes){
+            console.log(`${att.name} = ${att.value}`)
+        }
+    </script>
+</body>
+</html>

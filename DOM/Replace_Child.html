@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div> Top 5 Sigmas
+        <ul>
+            <li>Keanu Reeves</li>
+            <li>Andrew Tate</li>
+            <li >Johnny Bravo</li>
+            <li>Johnny Depp</li>
+            <li>Shinchan</li>
+        </ul>
+    </div>
+    <script>
+        const list = document.querySelector("ul")
+        const change = list.children[2]
+        const add_new = document.createElement("li")
+        add_new.textContent = "Subodh Gadekar"
+        list.replaceChild(add_new,change)
+    </script>
+</body>
+</html>

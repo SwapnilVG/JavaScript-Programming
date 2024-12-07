@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div> Top 5 Sigmas
+        <ul>
+            <li>Keanu Reeves</li>
+            <li class="hero">Andrew Tate</li>
+            <li >Johnny Bravo</li>
+            <li>Johnny Depp</li>
+            <li class="hero">Shinchan</li>
+            
+        </ul>
+    </div>
+    <script>
+        let a = document.querySelectorAll(".hero")
+        // if(a.previousElementSibling==null){
+        //     console.log("Siblings not present")
+        // }else{
+        //     console.log(a.previousElementSibling);
+        // }
+        a.forEach((element)=>{
+            console.log(element.previousElementSibling)
+        })
+
+        let b = document.querySelector(".hero");
+        console.log(b.previousSibling)
+
+
+        let c = document.querySelector(".hero")
+        console.log(b.nextElementSibling)
+        console.log(b.nextSibling)
+
+    </script>
+</body>
+</html>

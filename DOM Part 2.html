@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Part 2</title>
+</head>
+<body>
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+    <script>
+        //appendChild
+       let swap1 = document.createElement("h1");
+       swap1.className="dom1"
+       swap1.id="dom1"
+       swap1.style.fontSize="25px"
+       swap1.style.color="blue"
+       swap1.textContent="Swapnil"
+       document.body.appendChild(swap1)
+       console.log(swap1);
+
+        // Removing
+       let ul = document.querySelector("ul")
+       console.log(ul);
+       let lists =  document.querySelectorAll("li")
+       console.log(lists);
+       for(list of lists ){
+        ul.remove(list)
+       }
+    </script>
+</body>
+</html>
